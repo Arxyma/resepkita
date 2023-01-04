@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resepkita/models/recipe.dart';
 import 'package:resepkita/views/details.dart';
 
 class RecipeCard extends StatelessWidget {
@@ -118,7 +119,17 @@ class RecipeCard extends StatelessWidget {
             color: Colors.transparent,
             child: new InkWell(
               onTap: () {
-                Details();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => Details(
+                          recipe: Recipe(
+                              name: title,
+                              area: area,
+                              category: category,
+                              id: id,
+                              images: thumbnailUrl,
+                              instruction: instruction,
+                              tags: tags),
+                        )));
               },
             ),
           ))

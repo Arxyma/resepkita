@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Resep Kita',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'Poppins',
         primarySwatch: Colors.blue,
         primaryColor: Colors.white,
         textTheme: TextTheme(

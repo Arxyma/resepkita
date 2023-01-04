@@ -48,11 +48,14 @@ class _HomePageState extends State<HomePage> {
                 itemCount: _recipes.length,
                 itemBuilder: (context, index) {
                   return RecipeCard(
-                      id: _recipes[index].id,
-                      title: _recipes[index].name,
-                      category: _recipes[index].category,
-                      area: _recipes[index].area,
-                      thumbnailUrl: _recipes[index].images);
+                    id: _recipes[index].id,
+                    title: _recipes[index].name,
+                    category: _recipes[index].category,
+                    area: _recipes[index].area,
+                    thumbnailUrl: _recipes[index].images,
+                    tags: _recipes[index].tags,
+                    instruction: _recipes[index].instruction,
+                  );
                 },
               ));
   }
